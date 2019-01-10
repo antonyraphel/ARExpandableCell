@@ -18,6 +18,8 @@
 		34D31BFB21E662F900ABF6F7 /* ExpandableModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D31BF521E662F900ABF6F7 /* ExpandableModels.swift */; };
 		34D31BFC21E662F900ABF6F7 /* ExpandableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D31BF621E662F900ABF6F7 /* ExpandableViewController.swift */; };
 		34D31BFD21E662F900ABF6F7 /* ExpandableInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D31BF721E662F900ABF6F7 /* ExpandableInteractor.swift */; };
+		34D31C0021E6862E00ABF6F7 /* HeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34D31BFF21E6862E00ABF6F7 /* HeaderFooterView.xib */; };
+		34D31C0221E689BE00ABF6F7 /* HeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D31C0121E689BE00ABF6F7 /* HeaderFooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		34D31BF521E662F900ABF6F7 /* ExpandableModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableModels.swift; sourceTree = "<group>"; };
 		34D31BF621E662F900ABF6F7 /* ExpandableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableViewController.swift; sourceTree = "<group>"; };
 		34D31BF721E662F900ABF6F7 /* ExpandableInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableInteractor.swift; sourceTree = "<group>"; };
+		34D31BFF21E6862E00ABF6F7 /* HeaderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderFooterView.xib; sourceTree = "<group>"; };
+		34D31C0121E689BE00ABF6F7 /* HeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderFooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 		34D31BF121E662E600ABF6F7 /* Expandable */ = {
 			isa = PBXGroup;
 			children = (
+				34D31BFE21E6861700ABF6F7 /* CustomViews */,
 				34D31BF221E662F900ABF6F7 /* ExpandablePresenter.swift */,
 				34D31BF321E662F900ABF6F7 /* ExpandableWorker.swift */,
 				34D31BF421E662F900ABF6F7 /* ExpandableRouter.swift */,
@@ -125,6 +130,15 @@
 				34D31BF721E662F900ABF6F7 /* ExpandableInteractor.swift */,
 			);
 			path = Expandable;
+			sourceTree = "<group>";
+		};
+		34D31BFE21E6861700ABF6F7 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				34D31BFF21E6862E00ABF6F7 /* HeaderFooterView.xib */,
+				34D31C0121E689BE00ABF6F7 /* HeaderFooterView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34D31C0021E6862E00ABF6F7 /* HeaderFooterView.xib in Resources */,
 				34D31BCF21E6616A00ABF6F7 /* LaunchScreen.storyboard in Resources */,
 				34D31BCC21E6616A00ABF6F7 /* Assets.xcassets in Resources */,
 				34D31BCA21E6616900ABF6F7 /* Main.storyboard in Resources */,
@@ -232,6 +247,7 @@
 				34D31BF821E662F900ABF6F7 /* ExpandablePresenter.swift in Sources */,
 				34D31BFB21E662F900ABF6F7 /* ExpandableModels.swift in Sources */,
 				34D31BF921E662F900ABF6F7 /* ExpandableWorker.swift in Sources */,
+				34D31C0221E689BE00ABF6F7 /* HeaderFooterView.swift in Sources */,
 				34D31BFD21E662F900ABF6F7 /* ExpandableInteractor.swift in Sources */,
 				34D31BFA21E662F900ABF6F7 /* ExpandableRouter.swift in Sources */,
 				34D31BC521E6616900ABF6F7 /* AppDelegate.swift in Sources */,

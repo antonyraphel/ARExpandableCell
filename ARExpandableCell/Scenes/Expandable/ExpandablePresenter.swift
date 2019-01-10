@@ -13,16 +13,33 @@
 import UIKit
 
 protocol ExpandablePresentationLogic {
-    func presentSomething(response: Expandable.Something.Response)
+    func presentInitial(response: Expandable.Initial.Response)
 }
 
 class ExpandablePresenter: ExpandablePresentationLogic {
     weak var viewController: ExpandableDisplayLogic?
     
-    // MARK: Do something
+    // MARK: Do Initial
     
-    func presentSomething(response: Expandable.Something.Response) {
-        let viewModel = Expandable.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+    func presentInitial(response: Expandable.Initial.Response) {
+        let productViewModel = getProductViewModel(response: response)
+        let viewModel = Expandable.Initial.ViewModel(summary: productViewModel)
+        viewController?.displayInitial(viewModel: viewModel)
+    }
+    
+    // MARK: Private func
+    
+    private func getProductViewModel(response: Expandable.Initial.Response) -> [Expandable.Initial.ViewModel.ProductViewModel] {
+        let products = response.summary.map { Expandable.Initial.ViewModel.ProductViewModel(state: $0.state,
+                                                                                            type: $0.type,
+                                                                                            title: $0.title,
+                                                                                            products: getAll(product: $0.products))
+        }
+        return products
+    }
+    
+    private func getAll(product: [Expandable.Initial.Response.ProductResponse.AppleProductResponse]) -> [Expandable.Initial.ViewModel.ProductViewModel.AppleProductViewModel] {
+        let products = product.map { Expandable.Initial.ViewModel.ProductViewModel.AppleProductViewModel(title: $0.title) }
+        return products
     }
 }

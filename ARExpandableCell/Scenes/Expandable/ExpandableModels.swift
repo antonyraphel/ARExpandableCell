@@ -12,15 +12,58 @@
 
 import UIKit
 
+enum SectionType {
+    case iPhone
+    case iPad
+    case mac
+    case watch
+    case tv
+}
+
+enum Title: String {
+    case iPhone = "iPhone"
+    case iPad = "iPad"
+    case mac = "Mac"
+    case watch = "Watch"
+    case tv = "Tv"
+}
+
 enum Expandable {
     // MARK: Use cases
     
-    enum Something {
+    enum Initial {
         struct Request {
         }
         struct Response {
+            struct ProductResponse {
+                struct AppleProductResponse {
+                    var title: String
+                }
+                var state: Bool
+                var type: SectionType
+                var title: String
+                var products: [AppleProductResponse]
+            }
+            var summary: [ProductResponse]
         }
         struct ViewModel {
+            struct ProductViewModel {
+                struct AppleProductViewModel {
+                    var title: String
+                }
+                var state: Bool
+                var type: SectionType
+                var title: String
+                var products: [AppleProductViewModel]
+            }
+            var summary: [ProductViewModel]
+        }
+    }
+    
+    enum Update {
+        struct Request {
+            var state: Bool
+            var type: SectionType
         }
     }
 }
